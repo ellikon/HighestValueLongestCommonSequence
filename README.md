@@ -1,5 +1,10 @@
 # HighestValueLongestCommonSequence
 
+## Question 1: Empirical Comparison
+Graph for the runtime of 10 input files with increasing length of strings A and B
+<img width="752" height="452" alt="image" src="https://github.com/user-attachments/assets/097dabaf-863b-48b1-aba5-6715f8553f58" />
+
+
 ## Question 2: Recurrence Equation
 
 This recurrence equation is the basis for calculating the highest possible value of a common subsequence between two strings. This function can be built upon to later find the exact sequence itself based on the values chosen at each step.
