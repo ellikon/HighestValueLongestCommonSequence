@@ -56,7 +56,10 @@ def read_in(filename):
         if k < 1:
             raise ValueError("k must be >= 1")
         for _ in range(k):
-            ch, val = file.readline().split()
+            line = file.readline().split()
+            if len(line) != 2:
+                raise ValueError("Each value line must contain a character and an integer")
+            ch, val = line
             values[ch] = int(val)
 
         A = file.readline().strip()
