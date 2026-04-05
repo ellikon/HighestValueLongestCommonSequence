@@ -1,0 +1,8 @@
+values = {
+    "a": 2,
+    "b": 4,
+    "c": 5
+}
+
+A = "aacb"
+B = "caab"
