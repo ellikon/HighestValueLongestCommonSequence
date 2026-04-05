@@ -68,6 +68,12 @@ def read_in(filename):
     return A,B, values
 
 
+def write_out(filename, highest_value, subsequence):
+
+    with open(filename, "w") as file:
+        file.write(str(highest_value) + "\n")
+        file.write(subsequence + "\n")
+
 def main():
     if len(sys.argv) != 2:
         print("Wrong input. Use: python3 HVLCS.py <filename>")
@@ -85,6 +91,10 @@ def main():
 
     M, highest_value = HVLCS(A,B,values)
     longest_sequence = find_sequence(A,B,values, M)
+    outfile = ""
+    if (filename[-3:] == ".in"):
+        outfile = filename[:-2] + "out"
+    else:
+        outfile = filename + ".out"
 
-    print(highest_value)
-    print(longest_sequence)
+    write_out(outfile, highest_value, longest_sequence)
