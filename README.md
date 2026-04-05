@@ -1,5 +1,21 @@
 # HighestValueLongestCommonSequence
 
+Name: Luis Goicoechea - UFID:3500-9213
+
+Name: Robert Miller - UFID:6705-1188
+
+## Instructions to compile/build code 
+Code was written using Python 3.12
+
+## Instructions to run program
+If using a console you can navigate to the /src folder where the files are and use the command "python3 HVLCS.py ..\data\xxxxx where xxxxx is the name of the file you would like to use and is in the /data folder." (Replace '\' with '/' if using Linux or macOS)
+
+
+## Assumptions
+The input files will have k in the first line where k >= 1. There will then be **k** number of lines, each with a character and value pair separated by a space " ". After all character and value pairs there will be two more lines each containing a string corresponding to A and B which will then be compared. File should have the '.in' file extension
+
+The output file will have the result for highest value in the first line and in the second line will contain one of the possible subsequences that would result in that highest value. The file will use the same file name as the input but changing the '.in. extension to '.out'
+
 ## Question 1: Empirical Comparison
 Graph for the runtime of 10 input files with increasing length of strings A and B
 <img width="752" height="452" alt="image" src="https://github.com/user-attachments/assets/097dabaf-863b-48b1-aba5-6715f8553f58" />
