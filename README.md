@@ -14,7 +14,7 @@ OPT(i, j) =
 \begin{cases} 
 0 & \text{if } i < 0 \text{ or } j < 0 \\
 v(c_i) + OPT(i-1, j-1) & \text{if } A_i = B_j \\
-max(OPT(i - 1, j), OPT(i, j - 1))
+max(OPT(i - 1, j), OPT(i, j - 1)) & \text{otherwise}
 \end{cases}
 $$
 
