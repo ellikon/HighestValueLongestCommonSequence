@@ -7,15 +7,18 @@ values = {
 A = "aacb"
 B = "caab"
 
+M = [[0 for _ in range(len(B) + 1)] for _ in range(len(A) + 1)]
 
-def OPT(i, j):
-    if i < 0 or j < 0:
-        return 0
+for i in range(1, len(A) + 1):
+    for j in range(1, len(B) + 1):
+        if A[i - 1] == B[j - 1]:
+            M[i][j] = values[A[i - 1]] + M[i - 1][j - 1]
+        else:
+            M[i][j] = max(M[i - 1][j], M[i][j - 1])
 
-    if A[i] == B[j]:
-        return values[A[i]] + OPT(i - 1, j - 1)
-    else:
-        return max(OPT(i - 1, j), OPT(i, j - 1))
+highest_value = M[len(A)][len(B)]
 
+longest_sequence = " " * highest_value
 
-print(OPT(len(A) - 1, len(B) - 1))
+print(M)
+print(highest_value)
