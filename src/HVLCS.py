@@ -28,7 +28,7 @@ def find_sequence(A, B, values, M):
     i, j = len(A), len(B)
     longest_sequence = ""
     while i > 0 and j > 0:
-        if A[i - 1] == B[j - 1]:
+        if A[i - 1] == B[j - 1] and M[i][j] == values[A[i - 1]] + M[i - 1][j - 1]:
             longest_sequence = A[i - 1] + longest_sequence
             i -= 1
             j -= 1
@@ -98,3 +98,6 @@ def main():
         outfile = filename + ".out"
 
     write_out(outfile, highest_value, longest_sequence)
+
+if __name__ == "__main__":
+    main()
