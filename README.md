@@ -28,13 +28,13 @@ This recurrence equation is the basis for calculating the highest possible value
 $$
 OPT(i, j) = 
 \begin{cases} 
-0 & \text{if } i < 0 \text{ or } j < 0 \\
+0 & \text{if } i = 0 \text{ or } j = 0 \\
 v(c_i) + OPT(i-1, j-1) & \text{if } A_i = B_j \\
 max(OPT(i - 1, j), OPT(i, j - 1)) & \text{otherwise}
 \end{cases}
 $$
 
-This recurrence function and its base cases are correct becuase if either i or j are below 0, then they are out of range of the strings and should just return 0. If a character from both A and B matches, then the value of that character must be added to the max possible value of strings A and B that don't contain that character. If the characters don't equal each other, then it must return the max between taking a character from A or B.
+This recurrence function and its base cases are correct becuase if either i or j are 0, then they are out of range of the strings and should just return 0. If a character from both A and B matches, then the value of that character must be added to the max possible value of strings A and B that don't contain that character. If the characters don't equal each other, then it must return the max between taking a character from A or B.
 
 ## Question 3: Big-Oh
 
